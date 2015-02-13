@@ -6,3 +6,4 @@ module.exports = ->
     release:
       files:
         "dist/index.html": ["index.html"]
+        "dist/maptest.html": ["mapTest.html"]
