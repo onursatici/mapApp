@@ -4,13 +4,14 @@ define(function(require, exports, module) {
   // External dependencies.
   var Backbone = require("backbone");
   var HelloView = require("views/hello");
-  var MapTestView = require("views/mapTest");
+  var HandlebarsTestView = require("views/handlebarsTest");
   // Defining the application router.
   var Router = Backbone.Router.extend({
     routes: {
       '': 'index',
       'hello': 'sayHello',
-      'maptest': 'mapTest'
+      'maptest': 'mapTest',
+      'handlebarstest': 'handlebarsTest'
     },
 
     index: function() {
@@ -21,9 +22,9 @@ define(function(require, exports, module) {
       console.log('in the route!');
       helloView.render();
     },
-    mapTest: function(){
-      var mapTestView = new MapTestView();
-      mapTestView.render();
+    handlebarsTest: function(){
+      var handlebarsTestView = new HandlebarsTestView();
+      handlebarsTestView.render();
     }
   });
 

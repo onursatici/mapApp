@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,16 +16,25 @@
 <body>
   <!-- Application container. -->
   <main role="main" id="main">
-    <a href = "/hello">click</a>
-    <div id = "hello"></div>
-    <a class = "pure-button" href = "/maptest.html">exampleMap</a>
-    <div id = "map-canvas"></div>
+    <a href="/hello">click</a>
+    <div id="hello"></div>
+    <a class="pure-button" href="/maptest.html">exampleMap</a>
+    <div id="map-canvas"></div>
+    <a class="pure-button" href="/handlebarstest"></a>
+    <div id="handlebarsTest"></div>
   </main>
 
   <!-- Application source. -->
   <!-- build:[src] /source.min.js -->
-  <script src="/bower_components/requirejs/require.js"
-    data-main="/app/config"></script>
+  <script src="/bower_components/requirejs/require.js" data-main="/app/config"></script>
   <!-- /build -->
+  <script id='handlebarsTest-template' type='text/x-handlebars-template' >
+    <ul>
+      {{#each this}}
+      <li class="item">my name is {{name}} and I am {{age}}</li>
+      {{/each}}
+    </ul>
+  </script>
 </body>
+
 </html>
